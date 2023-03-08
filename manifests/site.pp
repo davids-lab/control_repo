@@ -6,7 +6,7 @@ node default {
    }
 }
  
-node david.master {
+node david.master.vm {
    include role::master_server
 }
 
