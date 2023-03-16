@@ -8,6 +8,10 @@ node default {
  
 node david.master {
    include role::master_server
+   file {'/root/README':
+     ensure  =>  file,
+     content =>  $fqdn,
+   }
 }
 
 node /^web/ {
