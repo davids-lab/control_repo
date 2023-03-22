@@ -5,7 +5,9 @@ node default {
       owner => 'root',
    }
 }
- 
+node 'minetest.puppet,vm' {
+  include role::minecraft_server
+}
 node david.master {
    include role::master_server
    file {'/root/README':
