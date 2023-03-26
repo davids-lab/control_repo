@@ -12,7 +12,7 @@ class minecraft {
   }
   exec {'java 17':
     command => 'rpm -i jdk-17.0.6_linux-x64_bin.rpm',
-    path    => '/usr/bin',
+    path    => '/opt/minecraft/',
   }
   package {'java': 
     ensure => present,
