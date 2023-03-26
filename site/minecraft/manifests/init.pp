@@ -11,7 +11,8 @@ class minecraft {
     source  => 'https://download.oracle.com/java/17/archive/jdk-17.0.6_linux-x64_bin.rpm',
   }
   exec {'java 17':
-    command => ['/usr/bin/rpm', '-i jdk-17.0.6_linux-x64_bin.rpm'],
+    command => 'rpm -i jdk-17.0.6_linux-x64_bin.rpm',
+    path    => '/usr/bin',
   }
   package {'java': 
     ensure => present,
